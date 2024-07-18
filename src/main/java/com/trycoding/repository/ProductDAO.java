@@ -41,6 +41,8 @@ public class ProductDAO {
 	}
 
 	public void addProduct(Product product) {
+		int lastId = products.get(products.size()-1).getId();
+		product.setId(lastId+1);
 		products.add(product);
 	}
 
